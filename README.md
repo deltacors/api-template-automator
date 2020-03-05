@@ -24,7 +24,7 @@ New > Project From Template
 ```
 
 The template is downloaded into the default workspace directory.
-My Mule 4 workspace directory is in
+My Mulesoft 4 workspace directory is
 ``` 
 ~/AnypointStudio/studio-workspace
 ```
@@ -33,6 +33,9 @@ I store all my Mulesoft projects in
 ``` 
 ~/AnypointStudio/repository
 ```
+Both directories must exist before running the script. 
+You can customize the variables DEFAULT_WORKSPACE_PATH and DEFAULT_REPO_PATH inside the script to fit your needs.
+
 ### Execution
 Once you have set up your alias, the directory to store you Mulesoft projects and a fresh template in your workspace:
 ``` 
