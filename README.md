@@ -12,6 +12,10 @@ To use this script globally edit your .bash_profile
 ``` 
 alias api='/path/to/script/script.sh'
 ```
+Refresh .bash_profile to make the changes take effect
+``` 
+source ~/.bash_profile
+```
 
 ### Praparation
 Import you template with Anypoint Studio 
@@ -30,10 +34,16 @@ I store all my Mulesoft projects in
 ~/AnypointStudio/repository
 ```
 ### Execution
-One you have set up your alias, the directory to store you Mulesoft projects and a fresh template in your workspace:
+Once you have set up your alias, the directory to store you Mulesoft projects and a fresh template in your workspace:
 ``` 
 api EXAMPLE_S-API
 ```
+
+### Process under the hood
+- Replace all the "API-LED-TEMPLATE" string placeholder
+- Rename default API-LED-TEMPLATE property files
+- Prepare pom.xml version for deployment
+- Initialize .gitignore to exclude /target/ files and folder
 
 ### Naming convention
 I use both naming and structure conventions such as:
