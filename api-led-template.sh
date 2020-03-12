@@ -59,7 +59,7 @@ else
     echo "$API_NAME/target/" >> $REPO_FOLDER/.gitignore
 
     echo "[+] Replacing default strings with provided API name following the naming conventions"
-    find $REPO_FOLDER/$API_NAME -type f -name pom.xml -exec sed -i '' s/"<version>[0-9].[0-9].[0-9]<\/version>"/"<version>1.0.0-SNAPSHOT<\/version>"/g {} + ;
+    find $REPO_FOLDER/$API_NAME -type f -name pom.xml -exec sed -i '' '1,/<version>[0-9].[0-9].[0-9]<\/version>/s/<version>[0-9].[0-9].[0-9]<\/version>/<version>1.0.0-SNAPSHOT<\/version>/' {} + ;
     find $REPO_FOLDER/$API_NAME -type f -name .project -exec sed -i '' s/$TEMPLATE_NAME/$API_NAME/g {} + ;
     find $REPO_FOLDER/$API_NAME -type f -name *.xml -exec sed -i '' s/$TEMPLATE_NAME/$API_NAME/g {} + ;
     find $REPO_FOLDER/$API_NAME -type f -name '*.yaml' -exec sed -i '' s/"$SPACE_DELIMITED_TEMPLATE_NAME"/"$SPACE_DELIMITED_API_NAME"/g {} + ;
